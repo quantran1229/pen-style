@@ -67,10 +67,7 @@ function colorValue(color: PenColor, isBg: boolean): string {
   return '';
 }
 
-export default function Pen(
-  txt: string,
-  options: PenOption | PenColor
-): string {
+export function Pen(txt: string, options: PenOption | PenColor): string {
   const value = [];
   // Check if options is color only
   if (typeof options === 'string' || (options as PenColorRPG).r) {
@@ -112,6 +109,3 @@ export default function Pen(
 
   return txt;
 }
-
-console.log(Pen("Red","red"),Pen("Cyan", "cyan"), Pen("Bold",{o:"b"}), Pen("Italic",{o:"i"}), Pen("Underline",{o:"u"}), Pen("bgColor",{c:"black",b:"white"}));
-console.log(`             ${Pen("P","#983afc")}${Pen("E","blue")}${Pen("N","cyan")} ${Pen("S","white")}${Pen("T","green")}${Pen("Y","red")}${Pen("L","yellow")}${Pen("E","orange")}`);

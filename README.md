@@ -1,7 +1,7 @@
 
 # pen-style
 
-![image](images/images.png)
+![image](images/image.png)
 
 ## A minimal color and formatting for console
 Simple color and formatting for console log.
@@ -17,16 +17,22 @@ Simple color and formatting for console log.
 Usage:
 
 ```javascript
-var Pen = require("pen-style");
+var { Pen } = require("pen-style");
 ```
 
-Output colored text:
+Or
+
+```javascript
+import { Pen } from "pen-style-test";
+```
+
+**Output colored text:**
 
 ```javascript
 console.log(Pen("This text is red","red"));
 ```
 
-Styles can be mixed:
+**Styles can be mixed:**
 
 ```javascript
 console.log(Pen("This text is cyan with underline and italic",{c:"cyan",o:"ui"}));
@@ -41,6 +47,10 @@ color can be default colors(`black`,`white`,`red`,`blue`,`green`,`yellow`,`cyan`
 Example
 ```javascript
 console.log(Pen("This using rgb",{r:120,g:50,b:12}));
+
+console.log(Pen("This using hex","#FF0000"));
+
+console.log(Pen("This using color","red"));
 ```
 
 **Pen(text, options)**
